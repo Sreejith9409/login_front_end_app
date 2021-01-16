@@ -1,0 +1,65 @@
+<%= bootstrap_form_tag url: '/user/create', remote: true do |form| %>
+  <div class="field">
+    <%= form.text_field :first_name, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :last_name, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :login, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.email_field :email, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.select :gender, [['Male', 'male'], ['Female', 'female']] %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :mobile_number, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :home_number %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :work_number %>
+  </div>
+
+  <div class="field">
+    <%= form.text_area :address %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :country %>
+  </div>
+  
+  <div class="field">
+    <%= form.text_field :pin_code %>
+  </div>
+
+  <div class="field">
+    <%= form.password_field :crypted_password, help: "Must be at least 6 characters long", :required => true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

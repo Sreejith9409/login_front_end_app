@@ -1,0 +1,7 @@
+<% if flash[:error].present? %>
+  alert('<%= flash[:error]%>')
+  <% flash[:error] = nil%>
+<% else %>
+  alert('Created Successfully')
+  window.location.replace("/")
+<% end %>
